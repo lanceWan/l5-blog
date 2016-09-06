@@ -56,14 +56,17 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/web.php');
+            // 后台登录
+            require base_path('routes/admin/LoginRoute.php');
         });
         // 后台路由
         Route::group([
-            'middleware' => 'web',
+            'middleware' => ['web'],
             'namespace' => $this->namespace.'\Admin',
             'prefix' => 'admin',
         ], function ($router) {
-            require base_path('routes/admin/LoginRoute.php');
+            // 后台首页
+            require base_path('routes/admin/DashboardRoute.php');
         });
     }
 

@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-	dd(auth('admin')->user()->name);
     return view('welcome');
 });
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index');
+
+
