@@ -1,2 +1,2 @@
 <?php
-$router->get('/', 'DashboardController@index');
+$router->get('dash', 'DashboardController@index');

@@ -48,7 +48,7 @@ class DashboardController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "this is show";
     }
 
     /**

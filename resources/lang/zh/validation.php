@@ -83,6 +83,7 @@ return [
     'unique'               => ':attribute 已经存在。',
     'uploaded'             => 'The :attribute uploading failed.',
     'url'                  => ':attribute 格式不正确。',
+    'captcha'              => ':attribute 不正确。',
 
     /*
     |--------------------------------------------------------------------------
@@ -120,6 +121,7 @@ return [
         'last_name'             => '姓',
         'password'              => '密码',
         'password_confirmation' => '确认密码',
+        'captcha'               => '验证码',
         'city'                  => '城市',
         'country'               => '国家',
         'address'               => '地址',

@@ -61,7 +61,7 @@ class RouteServiceProvider extends ServiceProvider
         });
         // 后台路由
         Route::group([
-            'middleware' => ['web'],
+            'middleware' => ['web','auth.admin:admin'],
             'namespace' => $this->namespace.'\Admin',
             'prefix' => 'admin',
         ], function ($router) {

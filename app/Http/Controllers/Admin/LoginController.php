@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class LoginController extends Controller
 {
@@ -22,7 +23,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/admin/dash';
     protected $username;
 
     /**
@@ -66,5 +67,24 @@ class LoginController extends Controller
     protected function guard()
     {
         return auth()->guard('admin');
+    }
+
+    /**
+     * 重写登录验证，添加验证码
+     * @author 晚黎
+     * @date   2016-09-06T23:07:59+0800
+     * @param  Request                  $request [description]
+     * @return [type]                            [description]
+     */
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            $this->username() => 'required', 
+            'password' => 'required',
+            'captcha' => 'required|captcha'
+        ],[
+            'captcha.required' => trans('validation.required'),
+            'captcha.captcha' => trans('validation.captcha'),
+        ]);
     }
 }

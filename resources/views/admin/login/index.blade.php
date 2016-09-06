@@ -18,7 +18,7 @@
     <em>Management System</em>
     </dt>
     <dd class="user_icon">
-    <input type="text" placeholder="{{config('admin.global.username')}}" name="{{config('admin.global.username')}}" class="login_txtbx"/>
+    <input type="text" placeholder="{{trans('validation.attributes.username')}}" name="{{config('admin.global.username')}}" class="login_txtbx" value="{{old(config('admin.global.username'))}}" />
     @if ($errors->has(config('admin.global.username')))
     <dt class="error">
       <em>{{ $errors->first(config('admin.global.username')) }}</em>
@@ -26,7 +26,7 @@
     @endif
     </dd>
     <dd class="pwd_icon">
-    <input type="password" placeholder="password" name="password" class="login_txtbx"/>
+    <input type="password" placeholder="{{trans('validation.attributes.password')}}" name="password" class="login_txtbx" />
     @if ($errors->has('password'))
     <dt class="error">
       <em>{{ $errors->first('password') }}</em>
@@ -35,9 +35,14 @@
     </dd>
     <dd class="val_icon">
     <div class="checkcode">
-      <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx">
+      <input type="text" id="J_codetext" placeholder="{{trans('validation.attributes.captcha')}}" name="captcha" maxlength="4" class="login_txtbx">
     </div>
-    <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+    <img src="{{captcha_src()}}" style="cursor: pointer;" onclick="this.src='{{captcha_src()}}'+Math.random()" class="ver_btn" />
+    @if ($errors->has('captcha'))
+    <dt class="error">
+      <em>{{ $errors->first('captcha') }}</em>
+    </dt>
+    @endif
     </dd>
     <dd>
     <input type="submit" value="立即登陆" class="submit_btn"/>
