@@ -53,7 +53,7 @@
     </dd>
   </dl>
 </form>
-  <script src="{{asset('vendors/jquery.js')}}"></script>
+  <script src="{{asset('vendors/jquery.min.js')}}"></script>
   <script src="{{asset('vendors/Particleground.js')}}"></script>
   <script>
   $(document).ready(function() {

@@ -33,8 +33,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-    	// dd('123');
-        // $this->middleware('guest', ['except' => 'logout']);
+        $this->middleware('guest:admin', ['except' => 'logout']);
         $this->username = config('admin.global.username');
     }
     /**

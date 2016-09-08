@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        echo "后台首页";
+        return view('admin.dash.index');
     }
 
     /**
