@@ -174,6 +174,7 @@ return [
         InfyOm\MetronicTemplates\MetronicTemplatesServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
         Bican\Roles\RolesServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
         /*
          * Application Service Providers...
          */

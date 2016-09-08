@@ -67,6 +67,8 @@ class RouteServiceProvider extends ServiceProvider
         ], function ($router) {
             // 后台首页
             require base_path('routes/admin/DashboardRoute.php');
+
+            Route::resource('permissions', 'PermissionController');
         });
     }
 

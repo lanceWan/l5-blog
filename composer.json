@@ -15,7 +15,8 @@
     	"doctrine/dbal": "~2.3",
         "mews/captcha": "^2.1",
         "predis/predis": "^1.1",
-        "bican/roles": "2.1.*"
+        "bican/roles": "2.1.*",
+        "yajra/laravel-datatables-oracle": "~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

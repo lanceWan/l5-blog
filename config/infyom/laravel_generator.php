@@ -27,7 +27,7 @@ return [
 
         'api_request'       => app_path('Http/Requests/API/'),
 
-        'controller'        => app_path('Http/Controllers/Admin'),
+        'controller'        => app_path('Http/Controllers/Admin/'),
 
         'api_controller'    => app_path('Http/Controllers/API/'),
 
@@ -61,7 +61,7 @@ return [
 
         'repository'        => 'App\Repositories',
 
-        'controller'        => 'App\Http\Controllers',
+        'controller'        => 'App\Http\Controllers\Admin',
 
         'api_controller'    => 'App\Http\Controllers\API',
 
