@@ -6,6 +6,11 @@
 
 > 将用到的知识点总结出来
 
+**2016-09-09**
+* laravel generator 扩展
+* laravel datatables 扩展
+
+
 **2016-09-06**
 
 * 自定义Middleware
