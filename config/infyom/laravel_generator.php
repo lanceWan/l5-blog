@@ -37,7 +37,7 @@ return [
 
         'api_test'          => base_path('tests/'),
 
-        'views'             => base_path('resources/views/'),
+        'views'             => base_path('resources/views/admin/'),
 
         'schema_files'      => base_path('resources/model_schemas/'),
 

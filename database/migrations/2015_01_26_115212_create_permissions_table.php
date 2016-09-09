@@ -18,6 +18,7 @@ class CreatePermissionsTable extends Migration
             $table->string('slug')->unique();
             $table->string('description')->nullable();
             $table->string('model')->nullable();
+            $table->timestamp('deleted_at');
             $table->timestamps();
         });
     }

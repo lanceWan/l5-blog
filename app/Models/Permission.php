@@ -45,7 +45,13 @@ class Permission extends Model
 
 
     public $fillable = [
-        'name'
+        'name',
+        'slug',
+        'description',
+        'model',
+        'deleted_at',
+        'created_at',
+        'updated_at',
     ];
 
     /**
@@ -54,7 +60,7 @@ class Permission extends Model
      * @var array
      */
     protected $casts = [
-        'name' => 'string'
+        'name' => 'string',
     ];
 
     /**
@@ -63,7 +69,9 @@ class Permission extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'required'
+        'name' => 'required',
+        'slug' => 'required',
+        'description' => 'required',
     ];
 
     

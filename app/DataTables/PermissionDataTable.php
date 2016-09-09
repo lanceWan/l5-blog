@@ -72,7 +72,11 @@ class PermissionDataTable extends DataTable
     private function getColumns()
     {
         return [
-            'name' => ['name' => 'name', 'data' => 'name']
+            trans('admin/permission.model.name') => ['name' => 'name', 'data' => 'name'],
+            trans('admin/permission.model.slug') => ['name' => 'slug', 'data' => 'slug'],
+            trans('admin/permission.model.description') => ['name' => 'description', 'data' => 'description'],
+            trans('admin/permission.model.created_at') => ['name' => 'created_at', 'data' => 'created_at'],
+            trans('admin/permission.model.updated_at') => ['name' => 'updated_at', 'data' => 'updated_at'],
         ];
     }
 
