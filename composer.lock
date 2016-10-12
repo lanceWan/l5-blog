@@ -4,54 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f46aeb595f6890526b786f70ec32eef",
-    "content-hash": "fd261c61473a89c785e8b4f5c8001292",
+    "hash": "f81f8dfcd17306aa2e2056df9aaf8496",
+    "content-hash": "c58dacac0f268f33f50ac1803f8b3170",
     "packages": [
-        {
-            "name": "bican/roles",
-            "version": "2.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/romanbican/roles.git",
-                "reference": "582349795ef0af9ff1a64bb2c1b884bbd5ab7c98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/romanbican/roles/zipball/582349795ef0af9ff1a64bb2c1b884bbd5ab7c98",
-                "reference": "582349795ef0af9ff1a64bb2c1b884bbd5ab7c98",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Bican\\Roles": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Bičan",
-                    "email": "romanbican@seznam.cz"
-                }
-            ],
-            "description": "Powerful package for handling roles and permissions in Laravel 5.",
-            "keywords": [
-                "acl",
-                "auth",
-                "illuminate",
-                "laravel",
-                "permissions",
-                "roles"
-            ],
-            "time": "2015-07-30 10:00:12"
-        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
@@ -2403,6 +2358,59 @@
             "time": "2016-08-02 18:39:32"
         },
         {
+            "name": "spatie/laravel-permission",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "554e43d5576d1c4c723d19774e7e6f34c7c41e9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/554e43d5576d1c4c723d19774e7e6f34c7c41e9b",
+                "reference": "554e43d5576d1c4c723d19774e7e6f34c7c41e9b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0",
+                "laravel/framework": "~5.1.11|~5.2.0|~5.3.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.1.4",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 5.1",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "security",
+                "spatie"
+            ],
+            "time": "2016-08-26 07:17:52"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.3",
             "source": {
@@ -3507,6 +3515,51 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "bican/roles",
+            "version": "2.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/romanbican/roles.git",
+                "reference": "582349795ef0af9ff1a64bb2c1b884bbd5ab7c98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/romanbican/roles/zipball/582349795ef0af9ff1a64bb2c1b884bbd5ab7c98",
+                "reference": "582349795ef0af9ff1a64bb2c1b884bbd5ab7c98",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bican\\Roles": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Bičan",
+                    "email": "romanbican@seznam.cz"
+                }
+            ],
+            "description": "Powerful package for handling roles and permissions in Laravel 5.",
+            "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
+                "laravel",
+                "permissions",
+                "roles"
+            ],
+            "time": "2015-07-30 10:00:12"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",

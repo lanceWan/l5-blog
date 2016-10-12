@@ -6,6 +6,9 @@
 
 > 将用到的知识点总结出来
 
+**2016-10-12**
+* 添加Laravel 5.3权限管理包([https://github.com/spatie/laravel-permission](https://github.com/spatie/laravel-permission))
+
 **2016-09-09**
 * laravel generator 扩展
 * laravel datatables 扩展

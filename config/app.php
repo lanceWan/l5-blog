@@ -173,8 +173,8 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         InfyOm\MetronicTemplates\MetronicTemplatesServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
-        Bican\Roles\RolesServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Application Service Providers...
          */

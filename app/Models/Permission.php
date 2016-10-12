@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use Spatie\Permission\Models\Permission;
 /**
  * @SWG\Definition(
  *      definition="Permission",
@@ -34,21 +34,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *      )
  * )
  */
-class Permission extends Model
+class Permission extends Permission
 {
     use SoftDeletes;
 
     public $table = 'permissions';
-    
 
     protected $dates = ['deleted_at'];
 
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+    }
 
     public $fillable = [
         'name',
-        'slug',
         'description',
-        'model',
         'deleted_at',
         'created_at',
         'updated_at',
@@ -70,9 +71,7 @@ class Permission extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'slug' => 'required',
-        'description' => 'required',
     ];
 
-    
+
 }
