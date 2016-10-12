@@ -61,7 +61,7 @@ return [
         | be using the "HasRoles" and "HasPermissions" traits.
         |
         */
-        'users' => 'users',
+        'users' => 'admins',
 
 
         /*

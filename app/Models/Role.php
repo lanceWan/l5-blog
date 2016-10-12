@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Permission\Models\Permission as SpatiePermission;
+use Spatie\Permission\Models\Role as SpatieRole;
+
 /**
  * @SWG\Definition(
- *      definition="Permission",
+ *      definition="Role",
  *      required={"name"},
  *      @SWG\Property(
  *          property="id",
@@ -18,6 +19,11 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  *      @SWG\Property(
  *          property="name",
  *          description="name",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="description",
+ *          description="description",
  *          type="string"
  *      ),
  *      @SWG\Property(
@@ -34,11 +40,12 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  *      )
  * )
  */
-class Permission extends SpatiePermission
+class Role extends SpatieRole
 {
     use SoftDeletes;
 
-    public $table = 'permissions';
+    public $table = 'roles';
+    
 
     protected $dates = ['deleted_at'];
 
@@ -46,10 +53,10 @@ class Permission extends SpatiePermission
     {
         parent::__construct($attributes);
     }
-
+    
     public $fillable = [
         'name',
-        'description',
+        'description'
     ];
 
     /**
@@ -59,6 +66,7 @@ class Permission extends SpatiePermission
      */
     protected $casts = [
         'name' => 'string',
+        'description' => 'string'
     ];
 
     /**
@@ -67,8 +75,8 @@ class Permission extends SpatiePermission
      * @var array
      */
     public static $rules = [
-        'name' => 'required',
+        'name' => 'required'
     ];
 
-
+    
 }

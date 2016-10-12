@@ -18,7 +18,7 @@ class CreatePermissionTables extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('description')->default('');
-            $table->timestamp('deleted_at');
+            $table->softDeletes();
             $table->timestamps();
         });
 
@@ -26,15 +26,15 @@ class CreatePermissionTables extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('description')->default('');
-            $table->timestamp('deleted_at');
+            $table->softDeletes();
             $table->timestamps();
         });
 
         Schema::create($config['user_has_permissions'], function (Blueprint $table) use ($config) {
-            $table->integer('user_id')->unsigned();
+            $table->integer('admin_id')->unsigned();
             $table->integer('permission_id')->unsigned();
 
-            $table->foreign('user_id')
+            $table->foreign('admin_id')
                 ->references('id')
                 ->on($config['users'])
                 ->onDelete('cascade');
@@ -44,24 +44,24 @@ class CreatePermissionTables extends Migration
                 ->on($config['permissions'])
                 ->onDelete('cascade');
 
-            $table->primary(['user_id', 'permission_id']);
+            $table->primary(['admin_id', 'permission_id']);
         });
 
         Schema::create($config['user_has_roles'], function (Blueprint $table) use ($config) {
             $table->integer('role_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('admin_id')->unsigned();
 
             $table->foreign('role_id')
                 ->references('id')
                 ->on($config['roles'])
                 ->onDelete('cascade');
 
-            $table->foreign('user_id')
+            $table->foreign('admin_id')
                 ->references('id')
                 ->on($config['users'])
                 ->onDelete('cascade');
 
-            $table->primary(['role_id', 'user_id']);
+            $table->primary(['role_id', 'admin_id']);
         });
 
         Schema::create($config['role_has_permissions'], function (Blueprint $table) use ($config) {

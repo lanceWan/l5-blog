@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Permission;
+use App\Models\Role;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 
-class PermissionDataTable extends DataTable
+class RoleDataTable extends DataTable
 {
 
     /**
@@ -16,7 +16,7 @@ class PermissionDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', 'permissions.datatables_actions')
+            ->addColumn('action', 'roles.datatables_actions')
             ->make(true);
     }
 
@@ -27,9 +27,9 @@ class PermissionDataTable extends DataTable
      */
     public function query()
     {
-        $permissions = Permission::query();
+        $roles = Role::query();
 
-        return $this->applyScopes($permissions);
+        return $this->applyScopes($roles);
     }
 
     /**
@@ -72,10 +72,8 @@ class PermissionDataTable extends DataTable
     private function getColumns()
     {
         return [
-            trans('admin/permission.model.name') => ['name' => 'name', 'data' => 'name'],
-            trans('admin/permission.model.description') => ['name' => 'description', 'data' => 'description'],
-            trans('admin/permission.model.created_at') => ['name' => 'created_at', 'data' => 'created_at'],
-            trans('admin/permission.model.updated_at') => ['name' => 'updated_at', 'data' => 'updated_at'],
+            'name' => ['name' => 'name', 'data' => 'name'],
+            'description' => ['name' => 'description', 'data' => 'description']
         ];
     }
 
@@ -86,6 +84,6 @@ class PermissionDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'permissions';
+        return 'roles';
     }
 }

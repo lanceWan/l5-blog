@@ -51,13 +51,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+        // 前台路由
         Route::group([
             'middleware' => 'web',
             'namespace' => $this->namespace,
         ], function ($router) {
             require base_path('routes/web.php');
-            // 后台登录
-            require base_path('routes/admin/LoginRoute.php');
         });
         // 后台路由
         Route::group([
@@ -66,10 +65,13 @@ class RouteServiceProvider extends ServiceProvider
             'namespace' => $this->namespace.'\Admin',
             'prefix' => 'admin',
         ], function ($router) {
+            // 登录
+            require base_path('routes/admin/LoginRoute.php');
             // 后台首页
             require base_path('routes/admin/DashboardRoute.php');
-
-            Route::resource('permissions', 'PermissionController');
+            // 权限
+            require base_path('routes/admin/PermissionRoute.php');
+            
         });
     }
 
