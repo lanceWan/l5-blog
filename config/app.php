@@ -166,14 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
-        Collective\Html\HtmlServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
-        Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
-        InfyOm\MetronicTemplates\MetronicTemplatesServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         /*
          * Application Service Providers...
@@ -231,10 +224,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-
-        'Form'      => Collective\Html\FormFacade::class,
-        'Html'      => Collective\Html\HtmlFacade::class,
-        'Flash'     => Laracasts\Flash\Flash::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
 
     ],

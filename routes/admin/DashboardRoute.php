@@ -1,2 +1,4 @@
 <?php
-$router->get('dash', 'DashboardController@index');
+$router->group(['middleware' => 'auth.admin:admin'],function ($router){
+  $router->get('dash', 'DashboardController@index');
+});

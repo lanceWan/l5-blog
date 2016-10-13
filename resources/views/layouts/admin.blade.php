@@ -126,8 +126,8 @@
   </div>
   <!--[if lt IE 9]>
   <script src="/vendors/respond.min.js"></script>
-  <script src="/vendors/excanvas.min.js"></script> 
-  <script src="/vendors/ie8.fix.min.js"></script> 
+  <script src="/vendors/excanvas.min.js"></script>
+  <script src="/vendors/ie8.fix.min.js"></script>
   <![endif]-->
   <!-- BEGIN CORE PLUGINS -->
   <script src="{{asset('vendors/jquery.min.js')}}" type="text/javascript"></script>

@@ -1,51 +1,13 @@
 <?php
-
 namespace App\Models;
-
-use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Permission\Models\Role as SpatieRole;
-
-/**
- * @SWG\Definition(
- *      definition="Role",
- *      required={"name"},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="name",
- *          description="name",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="description",
- *          description="description",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="created_at",
- *          description="created_at",
- *          type="string",
- *          format="date-time"
- *      ),
- *      @SWG\Property(
- *          property="updated_at",
- *          description="updated_at",
- *          type="string",
- *          format="date-time"
- *      )
- * )
- */
 class Role extends SpatieRole
 {
     use SoftDeletes;
 
     public $table = 'roles';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -53,30 +15,9 @@ class Role extends SpatieRole
     {
         parent::__construct($attributes);
     }
-    
+
     public $fillable = [
         'name',
         'description'
     ];
-
-    /**
-     * The attributes that should be casted to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'name' => 'string',
-        'description' => 'string'
-    ];
-
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [
-        'name' => 'required'
-    ];
-
-    
 }
