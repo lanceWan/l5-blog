@@ -21,7 +21,7 @@ var TableDatatablesResponsive = function () {
 
           // Or you can use remote translation file
           "language": {
-            url: '//cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Portuguese.json'
+            url: 'http://cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Portuguese.json'
           },
 
           // setup buttons extentension: http://datatables.net/extensions/buttons/

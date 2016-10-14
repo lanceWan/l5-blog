@@ -1,5 +1,5 @@
 <?php
 return [
-	'home' => 'Dashboard',
-	'permission' => '权限列表',
+	'home' => '<i class="fa fa-home"></i> Home',
+	'permission' => '<i class="fa fa-plane"></i> 权限列表',
 ];
