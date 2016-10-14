@@ -84,4 +84,9 @@ class DashboardController extends Controller
     {
         //
     }
+
+    public function dataTableI18n()
+    {
+        return response()->json(trans('pagination.i18n'));
+    }
 }

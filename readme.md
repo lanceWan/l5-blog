@@ -6,9 +6,14 @@
 
 > 将用到的知识点总结出来
 
+**2016-10-14**
+* datatables页面、js重新调整
+* 相关页面优化
+* 更换权限包[https://github.com/GeniusTS/roles](https://github.com/GeniusTS/roles)
+
 **2016-10-13**
 * 去掉 laravel generator、laravel datatables 扩展(虽然生成代码方便，但不是自己想要的风格。代码太重)
-* 添加 [l5-repository](https://packagist.org/packages/prettus/l5-repository) 扩展
+* 添加 l5-repository 扩展 [https://packagist.org/packages/prettus/l5-repository](https://packagist.org/packages/prettus/l5-repository) 
 
 **2016-10-12**
 * 添加Laravel 5.3权限管理包([https://github.com/spatie/laravel-permission](https://github.com/spatie/laravel-permission))

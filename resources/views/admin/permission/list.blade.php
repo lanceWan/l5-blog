@@ -21,7 +21,7 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h1 class="page-title">{!! trans('admin/breadcrumb.permission') !!}</h1>
+    <h1 class="page-title"></h1>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
@@ -29,11 +29,48 @@
           <!-- BEGIN EXAMPLE TABLE PORTLET-->
           <div class="portlet light bordered">
               <div class="portlet-title">
-                  <div class="caption font-dark">
-                      <i class="icon-settings font-dark"></i>
-                      <span class="caption-subject bold font-yellow-casablanca uppercase">{!! trans('admin/breadcrumb.permission') !!}</span>
+                <div class="caption">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold font-yellow-casablanca uppercase">{!! trans('admin/breadcrumb.permission') !!}</span>
+                </div>
+                <div class="actions">
+                  @permission(config('admin.permissions.permission.create'))
+                  <div class="btn-group btn-group-devided" data-toggle="buttons">
+                      <label class="btn purple btn-outline">
+                          <input type="radio" name="options" class="toggle" id="option2">{!! trans('admin/permission.action.create') !!}
+                      </label>
                   </div>
-                  <div class="tools"></div>
+                  @endpermission
+                  <div class="btn-group">
+                      <a class="btn green btn-outline" href="javascript:;" data-toggle="dropdown">
+                          <i class="fa fa-share"></i>
+                          <span class="hidden-xs"> {{trans('admin/permission.tools.title')}} </span>
+                          <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown-menu" id="sample_tools">
+                          <li>
+                              <a href="javascript:;" data-action="0" class="tool-action">
+                                  {!! trans('admin/permission.tools.print') !!}</a>
+                          </li>
+                          <li>
+                              <a href="javascript:;" data-action="1" class="tool-action">
+                                  {!! trans('admin/permission.tools.copy') !!}</a>
+                          </li>
+                          <li>
+                              <a href="javascript:;" data-action="2" class="tool-action">
+                                  {!! trans('admin/permission.tools.pdf') !!}</a>
+                          </li>
+                          <li>
+                              <a href="javascript:;" data-action="3" class="tool-action">
+                                  {!! trans('admin/permission.tools.excel') !!}</a>
+                          </li>
+                          <li>
+                              <a href="javascript:;" data-action="4" class="tool-action">
+                                  {!! trans('admin/permission.tools.csv') !!}</a>
+                          </li>
+                      </ul>
+                  </div>
+                </div>
               </div>
               <div class="portlet-body">
                 <table class="table table-striped table-bordered table-hover" id="datatableAjax">

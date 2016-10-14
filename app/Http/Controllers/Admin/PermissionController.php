@@ -12,6 +12,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
+        // dd(auth('admin')->user()->can(config('admin.permissions.permission.create')));
         return view('admin.permission.list');
     }
 
